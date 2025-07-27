@@ -35,7 +35,7 @@ console.log(process.env.PORT);
 //middelwares
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://afas-college-project.onrender.com"],
+    origin: ["http://localhost:3000", "https://afas-college-project.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
