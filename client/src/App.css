@@ -1,0 +1,67 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+}
+
+/* For WebKit (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bbf7d0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+}
+
+.marque-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marque-content {
+  position: absolute;
+  top: 100%; /* Start off the screen at the bottom */
+  left: 0;
+  animation: scroll-up 10s linear infinite; /* Adjust the animation speed and timing as needed */
+  /* white-space: nowrap; */
+}
+
+.marque-content.paused {
+  animation-play-state: paused; /* Pause the animation when the 'paused' class is applied */
+}
+
+@keyframes scroll-up {
+  0% {
+    top: 0%; /* Start off the screen at the bottom */
+  }
+  50% {
+    top: -100%; /* Scroll to the top */
+  }
+  100% {
+    top: 0%; /* Scroll to the top */
+  }
+}
+
+.translate {
+  width: fit-content;
+  height: 48px !important;
+}
+
+.translate input {
+  outline: none;
+}
+
+.translate .goog-logo-link {
+  display: none !important;
+}
+
+.translate span {
+  display: none;
+}
